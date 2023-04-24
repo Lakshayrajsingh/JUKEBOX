@@ -1,0 +1,22 @@
+create database userCredentials;
+use userCredentials;
+create table userdata(userName varchar(30),email varchar(70),userID varchar(30),passcode varchar(40),
+constraint primary key(userID));
+select * from userdata;
+select userID from userdata;
+select passcode from userdata;
+drop table userdata;
+delete from userdata where userID="laksh1";
+drop table Songs;
+create table Songs(songID int auto_increment primary key,songName varchar(40),Duration varchar(30),ArtistName varchar(50),Genre varchar(40),FilePath varchar(200));
+insert into Songs(songName,duration,artistName,Genre,FilePath) values("Infinity","3:57","Jaymesyoung","English","C:\Users\laksh\Desktop\clone projects\NIIT_Project_JukeBox\src\main\resources\Infinity.wav");
+insert into Songs(songName,duration,artistName,Genre,FilePath) values("Excuses","2:56","Apdhillon","Punjabi","C:\Users\laksh\Desktop\clone projects\NIIT_Project_JukeBox\src\main\resources\Excuses.wav");
+insert into Songs(songName,duration,artistName,Genre,FilePath) values("Unstoppable","4:06","Sia","English","C:\Users\laksh\Desktop\clone projects\NIIT_Project_JukeBox\src\main\resources\Unstoppable.wav");
+insert into Songs(songName,duration,artistName,Genre,FilePath) values("Pasoori","3:44","Alisethi","Hindi","C:\Users\laksh\Desktop\clone projects\NIIT_Project_JukeBox\src\main\resources\Pasoori.wav");
+drop table fav;
+drop table AvailablePlaylist;
+select * from Songs;
+select * from ayushplay;
+select * from AvailablePlaylist;
+set sql_safe_updates=0;
+delete from AvailablePlaylist where PlayListName="fav";
